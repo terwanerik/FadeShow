@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>FadeShow simple CSS3 slideshow</title>
+	
+	<link rel="stylesheet" href="css/jquery.fadeshow-0.1.min.css" />
+	<link rel="stylesheet" href="css/demo.css" />
+	
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="background"></div>
+	
+	<div class="text">
+		<h1>FadeShow</h1>
+		<h2>A simple fading CSS3 aspect-fill slideshow that maintains ratio while resizing</h2>
+		<p>&mdash;</p>
+		<p>Made by Erik Terwan, for more info check <a href="https://github.com/terwanerik/FadeShow">GitHub</a>.</p>
+	</div>
+	
+	<script src="src/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="src/jquery.fadeshow-0.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(function(){
+		var fadeShow = $(".background").fadeShow({
+			correctRatio: true,
+			shuffle: true,
+			speed: 10000,
+			images: ['https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?fit=crop&fm=jpg&h=700&q=75&w=1050',
+					 'https://unsplash.imgix.net/photo-1417444900330-dc44c79af021?fit=crop&fm=jpg&h=700&q=75&w=1050',
+					 'https://unsplash.imgix.net/photo-1416184008836-5486f3e2cf58?fit=crop&fm=jpg&h=1600&q=75&w=1050',
+					 'https://ununsplash.imgix.net/uploads/14132599381062b4d4ede/3b6f33f2?fit=crop&fm=jpg&h=700&q=75&w=1050',
+					 'https://unsplash.imgix.net/uploads/1413386993023a925afb4/4e769802?fit=crop&fm=jpg&h=700&q=75&w=1050']
+		});
+	});
+	</script>
+</body>
+</html>
