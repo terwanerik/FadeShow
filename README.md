@@ -44,7 +44,7 @@ $(function(){
 There are a number of options you can pass to the fadeShow, if you need a preview on how to do that, check the [live demo](http://terwanerik.github.io/FadeShow).
 
 | Option Name | Type | Default | Description |
-| ----------- | ----------- |
+| ----------- | ---- | ------- | ----------- |
 | images | Array of strings | null | All the images you want to display.  - REQUIRED |
 | speed | Integer | 8000 | The number of milliseconds to wait for the next slide to appear. |
 | startAtSlide | Integer | 0 | The index of the image to start with. |
