@@ -68,8 +68,12 @@
 			nextImage(); //set the image for 'startAtSlide' option
 			
 			setTimeout(function(){
-				setImageRatio($(".fadeShow-container .active")); //set ratio after 300 ms to let the image load
-			}, 300);
+				setImageRatio($(".fadeShow-container .active")); //set ratio after 10 ms to let the image load
+				
+				setTimeout(function(){
+					setImageRatio($(".fadeShow-container .active")); //set ratio after 300 ms again
+				}, 300);
+			}, 10);
 			
 			return $thisElement; //return self for chaining
 		}
