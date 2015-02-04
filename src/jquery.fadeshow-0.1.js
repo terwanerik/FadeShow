@@ -43,8 +43,6 @@
 				$imageElements.push($imageElement); //add it to the array of elements
 			});
 			
-			nextImage(); //set the image for 'startAtSlide' option
-			
 			setInterval(nextImage, settings.speed); //set the timer
 			
 			//check the settings for alterations
@@ -66,6 +64,12 @@
 				//shuffle the images
 				$imageElements = shuffleArray($imageElements);
 			}
+			
+			nextImage(); //set the image for 'startAtSlide' option
+			
+			setTimeout(function(){
+				setImageRatio($(".fadeShow-container .active")); //set ratio after 300 ms to let the image load
+			}, 300);
 			
 			return $thisElement; //return self for chaining
 		}
