@@ -1,12 +1,12 @@
 {
   "name": "fadeshow",
-  "version": "0.1",
-  "homepage": "https://github.com/terwanerik/fadeshow",
+  "version": "0.1.1",
+  "homepage": "https://github.com/terwanerik/FadeShow",
   "authors": [
     "Erik Terwan"
   ],
   "description": "A simple fading CSS3 aspect-fill slideshow that maintains ratio while resizing",
-  "main": ["src/jquery.fadeshow-0.1.min.js", "css/jquery.fadeshow-0.1.min.css"],
+  "main": ["src/jquery.fadeshow-0.1.1.min.js", "css/jquery.fadeshow-0.1.1.min.css"],
   "keywords": [
     "Slideshow",
     "jQuery",
