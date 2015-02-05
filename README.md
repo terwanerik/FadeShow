@@ -10,13 +10,13 @@ A live demo is available on [Github Pages](http://terwanerik.github.io/FadeShow)
 The plugin is really simple, add the jquery.fadeshow-[version].min.js to your project folder and include it.
 
 ```html
-<script src="src/jquery.fadeshow-0.1.min.js" type="text/javascript"></script>
+<script src="src/jquery.fadeshow-0.1.1.min.js" type="text/javascript"></script>
 ```
 
 Now add the CSS file and jquery.fadeshow-[version].min.css to your project and include it.
 
 ```html
-<link rel="stylesheet" href="css/jquery.fadeshow-0.1.min.css" />
+<link rel="stylesheet" href="css/jquery.fadeshow-0.1.1.min.css" />
 ```
 
 Place a container for the slideshow anywhere on your page, a div is preferred (it needs a width and height to show).
@@ -49,6 +49,9 @@ There are a number of options you can pass to the fadeShow, if you need a previe
 | correctRatio | Boolean | false | If true, the aspect-fill is kept intact while resizing the window. If false, the aspect-fill only works every time a new image appears. |
 | shuffle | Boolean | false | If true, the input will be shuffled, generating a random order every time you refresh. |
 
+
+##Underscore.js
+If you have implemented Underscore.js on your page, it will automaticly use the debounce function while resizing. This makes it a bit snappier on older devices.
 
 ##Known issues
 You can only change the fade speed / easing in the CSS file, somehow if you change it after the DOM has loaded, the CSS3 animation doesn't work.
