@@ -14,9 +14,7 @@
     "Animated",
     "Fading"
   ],
-  "dependencies":{
-  	"jquery": "~1.10.1",
-  },
+  "dependencies": { "jquery":"~1.10.1" },
   "license": "MIT",
   "ignore": [
     "**/.*",
