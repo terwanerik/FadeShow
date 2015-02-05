@@ -1,7 +1,7 @@
 /* 
  * FadeShow jQuery Plugin
  * Made by Erik Terwan
- * 3 February 2015
+ * 3 February 2015 - 0.1.1
  * 
  * This plugin is provided as-is and released under the terms of the MIT license.
  */
