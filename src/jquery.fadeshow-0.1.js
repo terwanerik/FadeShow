@@ -48,16 +48,31 @@
 			//check the settings for alterations
 			if(settings.correctRatio){
 				//correct the fill ratio when rezing the window 
-				$(window).resize(function(){
-					var runningElement = currentSlide - 1; //get the current visible slide,
-					//that is currentSlide minus one because we upped it with 1 in the nextImage function
-					
-					if(runningElement < 0){
-						runningElement = $imageElements.length - 1; //lower than 0 == last slide
-					}
-					
-					setImageRatio($imageElements[runningElement]); //set the ratio
-				});
+				
+				//check if underscore.js is used
+				if(typeof _ === 'function' && typeof _.debounce !== 'undefined') {
+					$(window).resize(_.debounce(function(){
+						var runningElement = currentSlide - 1; //get the current visible slide,
+						//that is currentSlide minus one because we upped it with 1 in the nextImage function
+						
+						if(runningElement < 0){
+							runningElement = $imageElements.length - 1; //lower than 0 == last slide
+						}
+						
+						setImageRatio($imageElements[runningElement]); //set the ratio
+					}, 50));
+				} else{
+					$(window).resize(function(){
+						var runningElement = currentSlide - 1; //get the current visible slide,
+						//that is currentSlide minus one because we upped it with 1 in the nextImage function
+						
+						if(runningElement < 0){
+							runningElement = $imageElements.length - 1; //lower than 0 == last slide
+						}
+						
+						setImageRatio($imageElements[runningElement]); //set the ratio
+					});
+				}
 			}
 			
 			if(settings.shuffle){
