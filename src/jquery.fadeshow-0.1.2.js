@@ -88,7 +88,7 @@
 				setTimeout(function(){
 					setImageRatio($(".fadeShow-container .active")); //set ratio after 300 ms again
 				}, 300);
-			}, 10);
+			}, 50);
 			
 			return $thisElement; //return self for chaining
 		}
@@ -138,22 +138,24 @@
 			}
 		}
 		
+		
+		/**
+		 * Randomize array element order in-place.
+		 * Using Fisher-Yates shuffle algorithm.
+		 * From http://stackoverflow.com/a/12646864/886926
+		 */
+		function shuffleArray(array)
+		{
+		    for (var i = array.length - 1; i > 0; i--) {
+		        var j = Math.floor(Math.random() * (i + 1));
+		        var temp = array[i];
+		        array[i] = array[j];
+		        array[j] = temp;
+		    }
+		    return array;
+		}
+		
+		
 		return init(); //return init > this for chaining
 	};
 }(jQuery));
-
-/**
- * Randomize array element order in-place.
- * Using Fisher-Yates shuffle algorithm.
- * From http://stackoverflow.com/a/12646864/886926
- */
-function shuffleArray(array)
-{
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    return array;
-}
