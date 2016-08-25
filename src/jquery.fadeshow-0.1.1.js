@@ -34,11 +34,11 @@
 		function init()
 		{
 			$thisElement.append("<div class='fadeShow-container'></div>"); //add the container to the element
-			
+
 			$.each(settings.images, function(count){
 				$(".fadeShow-container", $thisElement).append(format(this, count)); //format the image urls and place them inside the container
 				
-				var $imageElement = $("#fadeShow-slide"+count); //get the object
+				var $imageElement = $thisElement.find(".fadeShow-slide"+count); //get the object
 				
 				$imageElements.push($imageElement); //add it to the array of elements
 			});
@@ -97,7 +97,7 @@
 		function format(image, count)
 		{
 			//using the background-image, but adding the image element so we can get the aspect ratio
-			return "<div class='image' id='fadeShow-slide"+count+"' style='background-image: url("+image+");'><img src='"+image+"' alt='' /></div>";
+			return "<div class='image fadeShow-slide"+count+"' style='background-image: url("+image+");'><img src='"+image+"' alt='' /></div>";
 		}
 		
 		//display the next image in the array
@@ -105,10 +105,12 @@
 		{
 			//loop through all image elements
 			$.each($imageElements, function(count){
+
 				if(currentSlide == count){
 					setImageRatio(this);
-					
+
 					$(this).addClass('active').removeClass('inactive'); //toggle active class
+
 				} else{
 					$(this).removeClass('active').addClass('inactive'); //toggle inactive class 
 				}
