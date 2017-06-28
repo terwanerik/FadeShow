@@ -1,12 +1,15 @@
-#FadeShow - A simple CSS3 slideshow
-After having done a lot of fading slideshow-backgrounds lately, i decided to make a jQuery plugin to make my life easier. It aspect-fills the images, so its perfect for backgrounds. You can set an option to preserve the aspect-fill while resizing.
+# FadeShow - A simple CSS3 slideshow
 
-Enjoy, it might make your life easier as well.
+Please note: this project is over 2 years old, and has not been tested with newer versions of jQuery.
 
-##Demo
+It aspect-fills the images, so its perfect for backgrounds. You can set an option to preserve the aspect-fill while resizing.
+
+Enjoy.
+
+## Demo
 A live demo is available on [Github Pages](http://terwanerik.github.io/FadeShow).
 
-##Usage
+## Usage
 The plugin is really simple, add the jquery.fadeshow-[version].min.js to your project folder and include it.
 
 ```html
@@ -38,7 +41,7 @@ $(function(){
 ```
 
 
-##Options
+## Options
 There are a number of options you can pass to the fadeShow, if you need a preview on how to do that, check the [live demo](http://terwanerik.github.io/FadeShow).
 
 | Option Name | Type | Default | Description |
@@ -50,8 +53,8 @@ There are a number of options you can pass to the fadeShow, if you need a previe
 | shuffle | Boolean | false | If true, the input will be shuffled, generating a random order every time you refresh. |
 
 
-##Underscore.js
+## Underscore.js
 If you have implemented Underscore.js on your page, it will automaticly use the debounce function while resizing. This makes it a bit snappier on older devices.
 
-##Known issues
+## Known issues
 You can only change the fade speed / easing in the CSS file, somehow if you change it after the DOM has loaded, the CSS3 animation doesn't work.
