@@ -1,6 +1,6 @@
 # FadeShow - A simple CSS3 slideshow
 
-> ⚠ **Please note:** this project is over 2 years old, and has not been tested with newer versions of jQuery.
+> ⚠️ **Please note:** this project is over 2 years old, and has not been tested with newer versions of jQuery.
 
 It aspect-fills the images, so its perfect for backgrounds. You can set an option to preserve the aspect-fill while resizing.
 
